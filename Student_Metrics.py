@@ -197,6 +197,6 @@ st.write(' ')
 #         scale=alt.Scale(domain=[470, 528])
 #     ),
 #     color=alt.Color('variable:N',legend=alt.Legend(title='Range',orient='bottom'))
-)
+# )
 
-st.altair_chart(point_exam_scores,use_container_width=True)
+# st.altair_chart(point_exam_scores,use_container_width=True)
