@@ -4,9 +4,9 @@ from datetime import datetime, date
 import hmac
 import altair as alt
 
-st.set_page_config(page_title='Institution UMHB Student Dashboard',layout='wide')
+st.set_page_config(page_title='JW CARS Course | Baylor BS/MD Student Dashboard',layout='wide')
 
-st.title('Institution UMHB - Student Dashboard')
+st.title('JW CARS Course | Baylor BS/MD Student Dashboard')
 
 # Password protection
 def check_password():
