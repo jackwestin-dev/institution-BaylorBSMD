@@ -37,7 +37,7 @@ if not check_password():
     st.stop()  # Do not continue if check_password is not True.
 
 ## Read data from CSV files
-df_engagement_attendance = pd.read_csv('./student-data/institution-umhb-engagement-data.csv',parse_dates=['start_date','end_date'])
+df_engagement_attendance = pd.read_csv('./student-data/institution-bbsmd-engagement-data.csv',parse_dates=['start_date','end_date'])
 df_engagement_attendance['time_spent_hrs'] = (pd.to_timedelta(df_engagement_attendance['time_spent']).dt.total_seconds().div(3600).round(1))
 df_test_scores = pd.read_csv('./student-data/institution-umhb-test-data.csv',parse_dates=['test_date'])
 
