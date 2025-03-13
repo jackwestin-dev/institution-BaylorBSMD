@@ -92,6 +92,37 @@ st.altair_chart(line_time_spent, use_container_width=True)
 st.write(' ')
 st.write(' ')
 
+st.subheader('Completed Question Sets')
+st.write('This graph displays the number of question sets completed within our question bank per week. Question sets usually range between 5 to 10 questions, and can be discrete or passage-based questions.')
+st.write(' ')
+st.write(' ')
+
+line_question_sets = alt.Chart(df_engagement_attendance_student_filtered).mark_line(point=True).encode(
+    x=alt.X(
+        'week:O',
+        axis=alt.Axis(
+            labelAngle=0,
+            title='Week'
+        )
+    ),
+    y=alt.Y(
+        'total_completed_passages_discrete_sets',
+        axis=alt.Axis(
+            title='Completed Number of Question Sets'
+        )
+    ),
+    tooltip=[
+        alt.Tooltip('week:O', title='Week'),
+        alt.Tooltip('date_range:N', title='Date Range'),
+        alt.Tooltip('total_completed_passages_discrete_sets', title='Completed Count')
+    ],
+)
+
+st.altair_chart(line_question_sets,use_container_width=True)
+
+st.write(' ')
+st.write(' ')
+
 st.header('Accuracy')
 
 st.write(' ')
