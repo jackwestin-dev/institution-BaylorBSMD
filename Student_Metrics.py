@@ -129,7 +129,7 @@ st.write(' ')
 st.write(' ')
 
 line_accuracy = alt.Chart(df_engagement_attendance_student_filtered).mark_line(point=True).transform_fold(
-    fold=['sciences_accuracy', 'cars_accuracy','class_accuracy'], 
+    fold=['sciences_accuracy', 'cars_accuracy'], 
     as_=['variable', 'value']
 ).encode(
     x=alt.X(
